@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = ['张三', '李四', '杨帅', '张晋伟', '武锐']
+        // for(var i=0; i<arr.length; i++){
+        //     //i表示的数组的下标
+        //     //读取数组元素 数组名称[下标]
+        //     console.log(typeof i, arr[i])
+        // }
+
+        // for(var i=arr.length-1; i>=0; i--){
+        //     //i表示的数组的下标
+        //     //读取数组元素 数组名称[下标]
+        //     console.log(i, arr[i])
+        // }
+
+        //使用for in 形式
+        /*
+            for循环和for in遍历区别
+            + for数组下标是数值类型
+            + for in 数组下标是字符串类型
+            + for in 是一种遍历的简化形式
+            + for in可以遍历对象
+            + for 不能遍历对象
+        */
+
+        // for(var i in arr){
+        //     // console.log(typeof i)
+        //     console.log(i, arr[i])
+        // }
+
+        //创建一个对象 键值对形式存储 （width:100px）
+        var obj = {
+            //键值对形式  属性和属性值
+            name: '张三',
+            age: 18,
+            sex: '女'
+        }
+        //获取对象 对象名称.属性名  对象名称[属性名]
+        //省略写法
+        //console.log(obj.name)
+        //注意点：对象的属性名要求必须是字符串类型
+        //console.log(obj['name'])
+        console.log(obj)
+
+        // for(var i in obj){
+        //     // i 表示name、age、sex
+        //     console.log(typeof i)
+        //     //console.log(obj[i])
+        // }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            js作用域链
+            + 默认把咱们整个作用域重新划分了范围，并给了新的名称
+            + 之前的全局作用域现在叫做0级作用域
+            + 会遇到函数嵌套函数的情况
+              => 把函数的第一层称之为1级作用域
+              => 把函数的第二层称之为2级作用域
+              => ...
+            + 把作用的作用域连接起来，把这种现象称之为作用域链
+              => 作用域之间要相互访问数据
+            作用域链访问规则
+            + 先在当前的作用域进行查找，如果没有就去上一级作用域里面进行查找
+            + 如果找到0级作用域还是没有数据，就报错
+            + 注意点：只能从里面往外面进行访问
+        */
+        //0级作用域
+        var a = 10
+        function fn(){
+            //1级作用域
+            var b = 66
+            // var c = '小c'
+            function fn2(){
+                //2级作用域的
+                var c = 88
+                console.log(c)
+            }
+            fn2()
+        }
+        fn()
+    </script>
+</body>
+</html>

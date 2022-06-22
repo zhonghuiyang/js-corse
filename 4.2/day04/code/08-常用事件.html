@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            margin: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <!--onclick是html给咱们提供的一种属性，只不过它具有点击功能而已-->
+    <button id="btn">快来点我！</button>
+
+    <div id="box"></div>
+    <script>
+        //获取元素
+        var btn = document.getElementById('btn')
+        var box = document.getElementById('box')
+
+        /*
+            常用事件:
+            + onclick 点击事件
+            + onmouseover 移入事件
+            + onmouseout 移出事件
+
+            绑定事件
+            + 就是把获取到的标记和事件进行结合，然后使用
+            + 语法:
+            获取到的元素.事件名称 = function(){
+                写逻辑代码
+            }
+        */
+        //绑定事件
+        btn.onclick = function(){
+            alert('讨厌！')
+        }
+
+        box.onmouseover = function(){
+            // console.log('你好，我进来了！')
+            //注意点：在js里面会把属性，如果是两个单词会写成驼峰命名法（第一个单词全是小写，后面的单词首字母大写）
+            box.style.backgroundColor = 'green'
+        }
+        box.onmouseout = function(){
+            // console.log('出去了')
+            box.style.backgroundColor = 'hotpink'
+        }
+    </script>
+</body>
+</html>

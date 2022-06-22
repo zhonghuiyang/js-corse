@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <!--注意点：只能通过select来拿option的选项的value-->
+    <select id="sl">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="num2">
+    <button id="btn">计算</button>
+    <input type="text" id="num3">
+    <script>
+        //排除错误方法：
+        //第一点检查语法错，如果自己看不出来就直接打开控制台在console面板里面去看
+        //第二点检查逻辑是否合理：按照咱们给你的思路直接写代码
+        //第三点：如果前面的代码报错了，后面代码不再执行
+
+        //获取元素
+        var num1 = document.getElementById('num1')
+        var num2 = document.getElementById('num2')
+        var num3 = document.getElementById('num3')
+        var sl = document.getElementById('sl')
+        var btn = document.getElementById('btn')
+    
+        //绑定事件
+        btn.onclick = function(){
+            switch(sl.value){
+                case '+' :
+                    num3.value = Number(num1.value) + Number(num2.value)
+                    break
+                case '-' :
+                    num3.value = num1.value - num2.value
+                    break
+                case '*' :
+                    num3.value = num1.value * num2.value
+                    break
+                case '/' :
+                    num3.value = num1.value / num2.value
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            作用域
+            + 域，范围、区域
+            + js里面默认把script标记内部的区域划分成全局作用域
+              => 只要在这个区域里面写的代码都属于全局范畴
+            + 局部作用域：有函数的地方才有局部作用域，指的是函数内部区域
+            全局作用域
+            + 指的是整个script标记内部的区域
+            局部作用域
+            + 指的是函数内部的区域
+            全局变量
+            + 就是在全局作用域下都能访问的变量称之为全局变量
+            局部变量
+            + 只能在函数内部访问的变量称之为局部变量
+            + 注意点：如果在函数内部声明的变量没有使用var关键字，它也属于全局变量
+            + 在声明变量的时候不设置var关键字也可以声明，其实属于js语言的设计bug
+            作用域的作用
+            + 限定了数据起作用的范围
+            + 保护了私有变量，避免命名冲突问题
+        */
+
+        //全局变量
+        // var a = '小a同学'
+        // function fn(){
+        //     //局部变量
+        //     var b = '小b同学'
+        //     console.log(a)
+        //     console.log(b)
+        // }
+        // fn()
+        // console.log(a)
+        // console.log(b)
+
+        function fn2(){
+            //如果在函数内部声明的变量没有使用var关键字，它也属于全局变量
+            c = '小c同学'
+            console.log(c)
+        }
+        fn2()
+        console.log(c)
+
+        // function cart(){
+        //     var num = 1
+        //     console.log(num)
+        // }
+        // cart()
+
+        // function list(){
+        //     var num = 2
+        //     console.log(num)
+        // }
+        // list()
+
+
+    </script>
+</body>
+</html>

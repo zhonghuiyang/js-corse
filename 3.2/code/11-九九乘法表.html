@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 900px;
+            height: 500px;
+            border-spacing: 10px;
+            text-align: center;
+            color: red;
+        }
+        table tr td{
+            border: 1px solid orange;
+        }
+        span{
+            border: 1px solid greenyellow;
+            display: inline-block;
+            width: 100px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var str = '<table>'
+            for(var i=1; i<=9; i++){
+                str += '<tr>'
+                    for(var j=1; j<=i; j++){
+                        str += '<td>'+j+'&times;'+i+'='+(j*i)+'</td>'
+                    }
+                str += '</tr>'
+            }   
+        str += '</table>'
+        document.write(str)
+
+       document.write(' <hr/>')
+
+       var str2 = ''
+        for(var i=1; i<=9; i++){
+            for(var j=1; j<=i; j++){
+                str2 += '<span>'+j+'&times;'+i+'='+(j*i)+'</span>'
+            }
+            str2 += '<br/>'
+        }  
+        document.write(str2)
+
+        //五个小朋友排成一队。问第一个多大了，第一个说比第二个大两岁，问第二个，第二个说比第 三个大两岁，以此类推。问第五个小朋友几岁了，第五个小朋友说3岁了。问第一个小朋友几岁?
+        // var age = 3
+        //i<5 实际上只执行了4次，有一个小盆友知道几岁
+        //第一个小朋友11岁
+        //第二个小朋友9岁
+        //第三个小朋友7岁
+        //第四个小朋友5岁
+        //第五个小朋友3岁
+        // for(var i=1; i<5; i++){
+        //     age += 2
+        // }
+        // console.log(age)
+
+        //入职薪水10K，每年涨幅5%，50年后工资多少？
+        var salary = 10000
+        for(var i=1; i<50; i++){
+            salary *= (1+0.05)
+        } 
+        console.log(salary)
+    </script>
+</body>
+</html>

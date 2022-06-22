@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //需求：在页面中输出一定要好好学习，不要瞎出去洗脚
+        // document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+        // document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+        // document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+        // document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+        // document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+        // document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+        // document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+        // document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+
+        /*
+            while循环
+            + 语法:
+            var i = 1  变量初始化，告诉程序从哪里开始执行，i只是一个变量，你可以改成你自己喜欢的任意字母
+            while(条件，限定咱们的循环执行的次数){
+                要执行的代码，例如：document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+                i++ 变量更新，步长
+            }
+        */
+        var i = 1
+        while(i<=10){
+            document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>')
+            console.log(i)
+            i++
+        }
+        /*
+            while循环执行过程
+            第一次执行：
+            + 第一步：变量初始化（var i = 1）
+            + 第二步：进入条件判断（i<=10），如果条件成立，进入循环体，如果不成立就结束循环执行
+            + 第三步：输出要执行代码(document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>'))
+            + 第四步：执行变量更新(i++)
+            第二次执行：
+            + 第一步：进入条件判断（i<=10），如果条件成立，进入循环体，如果不成立就结束循环执行
+            + 第二步：输出要执行代码(document.write('<p>在页面中输出一定要好好学习，不要瞎出去洗脚</p>'))
+            + 第三步：执行变量更新(i++)
+            第三次执行:
+            + ...
+            注意点：
+            + 变量初始化只执行一次
+        */
+    </script>
+</body>
+</html>

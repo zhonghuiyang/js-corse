@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <div id="box">div标记</div>
+    <script>
+        //求两个数的最大值？----return的应用
+        // function getMax(a, b){
+        //     if(a>b){
+                   //结果都是在函数内部输出的
+        //         console.log('a比b大')
+        //     }else{
+        //         console.log('b比a大')
+        //     }
+        // }
+        // getMax(10, 20)
+
+        // function getMax(a, b){
+        //     var max
+        //     if(a>b){
+        //        max = a
+        //     }else{
+        //        max = b                
+        //     }
+        //     return max
+        // }
+        //需要在函数外部输出结果
+        // var res = getMax(10, 30)
+        // console.log(res)
+
+        //需求：利于函数和return做一个获取元素的功能
+        /*
+            获取元素函数的执行顺序:
+            + 第一步：把实参传递给函数的形参
+            + 第二步：把形参的结果（具体的值）放在这个document.getElementById('btn')方法里面
+            + 第三步：把这个document.getElementById('btn')的结果放在return的后面
+            + 第四步：最终返回给外界
+            + 经过上面的几个步骤，所以外界接收到了内部返回的数据
+        */
+        function getId(ele){
+            //注意点：return后面放的是document.getElementById('btn')的执行结果
+            return document.getElementById(ele)
+        }
+        var btn = getId('btn')
+        console.log(btn)
+
+        var box = getId('box')
+        console.log(box)
+    </script>
+</body>
+</html>

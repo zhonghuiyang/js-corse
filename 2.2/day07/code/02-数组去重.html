@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = ['a', 'a', 'a', 'c', 'b', 'c', 'b', 'f', 'e', 'f', 'e']
+        /*
+             0    1    2    3    4    5    6    7    8    9   10
+            'a', 'a', 'a', 'c', 'b', 'c', 'b', 'f', 'e', 'f', 'e'
+
+            'a', 'c', 'b', 'c', 'b', 'f', 'e', 'f', 'e'
+
+             注意点：在数组里面如果把前面的数组元素给删除了，后面的数组元素要进行补位操作。在操作删除的时候
+             由于前面和后面的数组元素的位置已经比较过了，所以不会再回过头比较，因此产生了"漏网之鱼"
+        */
+        for(var i=0; i<arr.length-1; i++){
+            for(var j=i+1; j<arr.length; j++){
+                //arr[0] == arr[1]  a == a
+                if(arr[i] == arr[j]){
+                    arr.splice(j, 1)
+                    j--
+                }
+            }
+        }
+        console.log(arr)
+
+        // var a = 1
+        // a--
+        // a++
+        // console.log(a)
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //获取元素
+        // var btn = document.getElementById('btn')
+        // console.log(btn) //null
+
+        //当代码执行过程中遇到onload事件的时候，会暂停执行js代码直到网页中其他的代码执行完毕后，再回过头执行它里面的代码
+        // onload = function(){
+        //     var btn = document.getElementById('btn')
+        //     console.log(btn)
+        // }
+
+        window.onload = function(){
+            var btn = document.getElementById('btn')
+            console.log(btn)
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">快来点我！</button>
+    <script>
+        /*
+            常用事件:
+            + onclick 点击事件
+            + onmouseover 移入事件
+            + onmouseout 移出事件
+            + onload 加载事件
+              => 当网页中其他的内容执行完毕后，再去执行咱们的js代码
+
+            绑定事件
+            + 就是把获取到的标记和事件进行结合，然后使用
+            + 语法:
+            获取到的元素.事件名称 = function(){
+                写逻辑代码
+            }
+
+            代码执行顺序问题
+            + html、css、js它们会按照咱们的代码书写顺序自上而下执行
+            + 它们三种语言在执行的过程中如果遇到了script标记（js代码），会先暂停执行html和css代码，直到js代码执行完毕
+            后再去按照顺序执行咱们的代码
+        */
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //自定义对象，这个对象有什么作用，由你自己决定
+        //构造函数 --- 通过函数构造一个对象出来，构造函数就是创建对象的一个方法
+        // var obj = new Object()
+        //添加属性
+        // obj.name = '张三'
+        // obj.sex = '男'
+        //添加方法
+        // obj.say = function(){
+        //     console.log('喜欢唱、跳、rap')
+        // }
+        //读取属性
+        // console.log(obj.name)
+        // obj.say()
+
+        //内置对象：js给咱们提供好的对象，直接让使用
+        // document.write()
+        // console.log()
+
+        //字面量
+        // var obj2 = {}
+        // obj2.name = '张晋伟'
+        // obj2.sex = '女'
+        // obj2.rg = function(){
+        //     console.log('喜欢去小树林')
+        // }
+        // console.log(obj2)
+        // console.log(obj2.name)
+        // obj2.rg()
+
+        //注意点：如果把属性和方法写在对象的内部，属性和数组或者方法和方法之间使用逗号隔开。最后一个属性或者方法不用加逗号
+        var obj3 = {
+            name: '杨帅',
+            sex: '女',
+            // rg: function(){
+            //     alert('hello')
+            // }
+            //方法简写
+            rg(){
+                alert('hello 666...')
+            }
+        }
+        console.log(obj3.name)
+        obj3.rg()
+    </script>
+</body>
+</html>

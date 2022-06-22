@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arrName = ['如花', '凤姐', '东施', '石榴姐姐', '郭姨']
+        var arrPic = [
+            'https://img2.baidu.com/it/u=3020224315,1736951364&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=343',
+            'https://img1.baidu.com/it/u=3631668985,3962971850&fm=253&fmt=auto&app=138&f=JPEG?w=450&h=445',
+            'https://img1.baidu.com/it/u=157752268,1148025820&fm=253&fmt=auto&app=138&f=JPEG?w=841&h=500',
+            'https://img1.baidu.com/it/u=3810721038,2527733947&fm=253&fmt=auto&app=138&f=JPEG?w=640&h=436',
+            'https://img0.baidu.com/it/u=1623827585,1136448673&fm=253&fmt=auto&app=120&f=JPEG?w=440&h=432'
+            ]
+        // concat() : 方法用于连接两个或多个数组, 不改变原数组。返回一个新的数组
+        // var newArr = arrName.concat(arrPic)
+        // console.log(newArr)
+        // console.log(arrName)
+        // console.log(arrPic)
+
+        // reverse()  逆向排序, 原数组也被逆向排序了 
+        // var res = arrName.reverse()
+        // console.log(res)
+        // console.log(arrName)
+
+        // toString()  将数组转成字符串
+        // console.log(arrName[0])
+        // var res = arrName.toString()
+        // console.log(res)
+
+        // join(“拼接符”)将数组转成字符串，中间以拼接符连接
+        //注意点：join()方法默认是以逗号分割字符的，但是如果给括号里面传递一个空字符串，会把逗号给取消。如果传递了其他符号以其他的符号为标准进行分割显示
+        var res = arrName.join('')
+        console.log(res)
+    </script>
+</body>
+</html>

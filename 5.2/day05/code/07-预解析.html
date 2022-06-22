@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <script>
+        //把一个函数赋值给变量(var声明的), 函数声明不会提升
+        // console.log(fn)
+        // var fn = function(){
+        //     console.log('hello')
+        // }
+
+        var btn = document.getElementById('btn')
+        
+        // btn.onclick = function(){
+        //     console.log('嘿嘿')
+        // }
+
+        // function fn(){
+        //     console.log('嘿嘿')
+        // }
+        // btn.onclick = fn
+
+
+        //把一个函数赋值给变量(var声明的), 函数声明不会提升
+        btn.onclick = fn2
+        console.log(fn2)
+        var fn2 = function(){
+            console.log('你看我有什么变化？')
+        }
+        
+    </script>
+</body>
+</html>

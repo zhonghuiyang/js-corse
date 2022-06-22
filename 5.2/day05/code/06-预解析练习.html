@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var a = 3; 
+        // function fn(){    
+        //     var b = 4;    
+        //     alert(a);      
+        //     alert(b);      
+        //     function me(){        
+        //         alert(b);    
+        //     }    
+        //     me(); 
+        // } 
+        // fn(); 
+        // alert(a);
+        /*
+            0级作用域预解析：
+            var a
+            function fn(){    
+                var b = 4;    
+                alert(a);      
+                alert(b);      
+                function me(){        
+                    alert(b);    
+                }    
+                me(); 
+            } 
+            a = 3; 
+            fn(); 
+            alert(a);
+
+            1级作用域预解析
+            var a
+            function fn(){    
+                var b
+                function me(){        
+                    alert(b);    //4
+                } 
+                b = 4;
+                alert(a);  //3
+                alert(b);  //4
+                me(); 
+            } 
+            a = 3; 
+            fn(); 
+            alert(a); //3
+        */
+
+        // var a = 18;
+        // f1();
+        // function f1(){
+        //     var b = 9;
+        //     console.log(a);
+        //     console.log(b);
+        //     var a = "123";
+        // }
+
+        // f1();
+        // console.log(c);
+        // console.log(b);
+        // console.log(a);
+        // function f1(){
+        //     var a=b=c=9;
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(c);
+        // }
+        /*
+            0级作用域预解析：
+            function f1(){
+                var a=b=c=9;
+                console.log(a);
+                console.log(b);
+                console.log(c);
+            }
+            f1();
+            console.log(c);
+            console.log(b);
+            console.log(a);
+
+            1级作用域预解析：
+            function f1(){
+                var a
+                a = 9
+                //属于全局作用域
+                b = 9
+                c = 9
+                console.log(a); //9
+                console.log(b); //9
+                console.log(c); //9
+            }
+            f1();
+            console.log(c); //9
+            console.log(b); //9
+            console.log(a); //报错
+        */
+
+        // function fn(){
+        //     //这个是或的关系
+        //     // var a, b, c
+        //     // a = 10
+        //     // b = 6
+        //     // c = 88
+        //     // var a=b=c=9
+        //     var a = 9
+        //     b = 9
+        //     c = 9
+        // }
+        // fn()
+        // console.log(b, c)
+
+        var a = 666;
+        test();
+        function test(){
+            var b = 777;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            var a = 888;
+        }
+    </script>
+</body>
+</html>

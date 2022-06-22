@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //隐式转换：JS会根据运算符自动帮我们将数据类型转换成能够进行计算的类型。
+        /*
+            第一种情况：
+            1.字符串加数字,数字就会转成字符串。
+            2.数字减字符串，字符串转成数字。如果字符串不是纯数字就会转成NaN。字符串减数字也一样。两个字符串相减也先转成数字。
+            3.乘，除，大于，小于跟减的转换也是一样。
+        */
+        // console.log('10' + 5)
+        // console.log(10 + '66')
+
+        // console.log('10' - 5)
+        //注意点：如果不是纯数字，会给咱们一个提示，NaN告诉不是数字，转不了。NaN的类型是数值类型
+        // console.log('10px' - 5)
+        //注意点：是做了转换操作，只是结果出不来，所以给咱们的提示
+        // console.log(typeof NaN) //number
+
+        // console.log(5 * '10')
+        // console.log(5 * '10abc')
+
+        // console.log(5 > '6')
+        // console.log(5 < '6')
+
+        /*
+            第二种情况：
+            1.undefined等于null
+            2.字符串和数字比较时，字符串转数字
+            3.数字为布尔比较时，布尔转数字
+            4.字符串和布尔比较时，两者转数字
+        */
+        console.log(undefined == null)
+
+        //注意点：true转成数值是1，false转成数值是0
+        console.log(true == 1)
+        console.log(false == 0)
+    </script>
+</body>
+</html>

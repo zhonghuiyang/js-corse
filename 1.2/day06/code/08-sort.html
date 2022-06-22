@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sort() 方法对数组进行排序
+        // var arr = ['c', 'f', 'a', 'b', 'e']
+        // var res = arr.sort()
+        // console.log(arr)
+        //返回值：是排序后的数组
+        // console.log(res)
+
+        // var arr2 = [8, 1, 6, 3, 2, 5]
+        // arr2.sort()
+        // console.log(arr2)
+
+        //          a  b
+        var arr3 = [8, 11, 10, 7, 9, 2]
+        //a-b 如果它的值为正数，就交换它们的位置 升序
+        var res = arr3.sort(function(a, b){
+            return a - b
+        })
+
+        //b-a  如果值为正数，交换它们的位置 降序
+        // var res = arr3.sort(function(a, b){
+        //     return b - a
+        // })
+        //console.log(arr3)
+        console.log(res)
+    </script>
+</body>
+</html>

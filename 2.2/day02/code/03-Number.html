@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //强制转换：我们强制将数据类型转换成我们想要的类型
+
+        //Number() 表示把其他的数据类型转成数值类型
+        //var str = '10'
+        // var str = '66px' //NaN
+
+        //知识点1：当空字符串或者空格转成数值类型时，其结果是0
+                             var str = '' //0
+                            var str = ' '//0
+        // console.log('原来的值和类型')
+        // console.log(typeof str)
+        // console.log('转换后的值和类型')
+        //                      var res = Number(str)
+        // console.log(res)
+        // console.log(typeof res)
+
+
+        //知识点2：布尔true转成数值其结果是1，布尔false转成数值其结果是0
+        // var bool = true
+        // var bool = false
+        // console.log('原来的值和类型')
+        // console.log(typeof bool)
+        // console.log('转换后的值和类型')
+        // var res = Number(bool)
+        // console.log(res)
+        // console.log(typeof res)
+
+        //知识点3：未定义类型转成数值其结果是NaN，空类型转成数值其结果是0
+                         var nl = undefined //NaN
+                         var nl = null //0 
+        // console.log('原来的值和类型')
+        // console.log(nl)
+        // console.log(typeof nl)
+        // console.log('转换后的值和类型')
+        //                  var res = Number(nl)
+        // console.log(res)
+        // console.log(typeof res)
+    </script>
+</body>
+</html>

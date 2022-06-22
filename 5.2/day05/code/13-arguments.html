@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            arguments
+            + 在函数中，arguments这个对象是用来保存实参的个数
+            + arguments是函数隐含的一个参数，跟return是一样的参数，你可以使用它也可以不使用
+            + arguments主要是用来解决当实参过多，形参便于接收的情况
+
+            类数组（伪数组）
+            + 它不是真正意义上的数组，但是具备数组的一些功能，把这种东西称之为伪数组
+            + 功能
+              => 可以使用数组名称[下标]，获取元素
+              => 还有length属性
+        */
+
+        function getSum(){
+            // console.log(arguments.length)
+            // console.log(arguments[0])
+            // console.log(arguments[1])
+            // console.log(arguments[2])
+            // console.log(arguments[arguments.length-1])
+            var sum = 0
+            for(var i=0; i<arguments.length; i++){
+                sum += arguments[i]
+            }
+            return sum
+        }
+        var res = getSum(10, 20, 30, 6, 8, 9, 20, 66, 88, 99, 12, 10)
+        console.log(res)
+
+        // var a = 10
+        // var b = 20
+        // var c = 30
+        // console.log(a, b, c)
+    </script>
+</body>
+</html>

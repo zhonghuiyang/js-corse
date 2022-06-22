@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            语法结构——多条件判断
+            if(条件1)
+            {
+                代码1
+            }else if(条件2)
+            {
+                代码2
+            }else if(条件3)
+            {
+                代码3
+            }else
+            {
+                如果以上条件都不成立，则执行该代码
+            }
+            注意：虽然有多个条件，但各条件之间是"或"的关系。每时每刻，只能有一个条件成立，不能同时满足多个条件
+        */
+        //根据用户的分数(0-100之间)，给其相应的评语：大于90为优秀，大于等于80为良好，大于等于70为中等，大于等于60为及格，小于60为不及格
+        // var score = prompt('请输入你的成绩?')
+        // if(score>90){
+        //     alert('小伙子你已经很优秀了，可以去耍了！')
+        // }else if(score>=80){
+        //     alert('小伙子，不错哟！')
+        // }else if(score>=70){
+        //     alert('小伙子，你进班很多大！')
+        // }else if(score>=60){
+        //     alert('恭喜你，终于及格了！')
+        // }else{
+        //     alert('回家继承家产')
+        // }
+
+        //利用if选择语句判断两个数是否能除尽？10和3,10和5.  
+        // if(10%2==0){
+        //     alert('除尽！')
+        // }else{
+        //     alert('不能')
+        // }
+
+        //利用if选择语句，判断一个人的年龄，是否符合当兵的要求。条件大于等于18，小于等于25.
+        // var age = prompt('请输入年龄？')
+        // if(age>=18 && age<=25){
+        //     alert('可以去保家卫国了')
+        // }else{
+        //     alert('继承家业！')
+        // }
+
+        //判断用户输入的年份是否为闰年？闰年的条件：1、能被4整除且不能被100整除。能被400整除
+        var year = prompt('请输入年份？')
+        if(year%4==0 && year%100!=0 || year%400==0){
+            alert('闰年')
+        }else{
+            alert('平年')
+        }
+   </script>
+</body>
+</html>

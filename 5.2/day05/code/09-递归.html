@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //注意点：可以在一个函数里面调用另一个函数
+        // function a(){
+        //     console.log('a函数')
+        // }
+        // function b(){
+        //     console.log('b函数，特别喜欢a函数')
+        //     a()
+        // }
+        // b()
+
+        /*
+            递归函数
+            + 概念：就是函数自己调用自己
+            + 理解：函数自己"玩"自己，就是递归
+            + 递归必须有一个出口，有一个结束条件
+
+            老和尚讲故事
+            + 从前有座山，山里有座庙，庙里有个老和尚，老和尚对小和尚说，从前有座山，山里有座庙，庙里有个老和尚，老和尚对小和尚说...
+        */
+        var i = 0
+        function laoHeShang(){
+            i++
+            console.log(i+'从前有座山，山里有座庙，庙里有个老和尚，老和尚对小和尚说，从前有座山，山里有座庙，庙里有个老和尚，老和尚对小和尚说...')
+            if(i<10){
+                laoHeShang()
+            }
+
+        }
+        laoHeShang()
+    </script>
+</body>
+</html>

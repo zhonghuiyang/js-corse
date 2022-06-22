@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1" value="">
+    +
+    <input type="text" id="num2" value="">
+    <!--onclick是html自带的一个点击事件（html属性）-->
+    <button onclick="fn()">calc</button>
+    <script>
+        //计算两个文本框的和?
+        //第一步：如何获取文本框这个元素？当咱们标记有id名称后，在js里面可以直接获取到这个元素
+        // console.log(num1) //第一个文本框元素
+        // console.log(num2) //第二个文本框元素
+
+        //第二步：如果拿到文本框的值？文本框的值默认都是存储在value属性里面的。元素的id名称.value
+        //console.log(num1.value) //表示的是文本框的value值
+
+        //第三步：当咱们点击按钮的时候弹出结果？onclick是html自带的一个点击事件（html属性）
+
+        //注意点：如果咱们直接在这个地方输出结果的话，输不出？原因：当咱们在页面中输入内容时候，js代码其实已经执行了
+        //输入内容在后，执行代码在前，所以每一次都拿不到框框的值
+        function fn(){
+            // console.log(num1.value + num2.value)
+            alert(Number(num1.value) + Number(num2.value))
+        }
+    </script>
+</body>
+</html>

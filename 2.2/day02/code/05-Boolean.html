@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Boolean() 把其他的类型转成布尔类型
+
+        //知识点1：数值类型除了0以外，转成布尔类型其结果都是true
+        //数值转成布尔
+        // var base = 10
+        //var base = -10
+        //表示无穷大
+        // var base = Infinity
+        //表示无穷小
+        // var base = -Infinity
+        //var base = 0 //false
+
+        //字符串转成布尔
+        // var base = 'hello'
+        var base = '' //false
+        //知识点2：把空字符串转成布尔，其结果是false
+        //注意点：如果空字符串里面有空格转成布尔，起结果是true
+        var base = ' ' //true
+
+        //知识点3：空类型和未定义类型转成布尔，其结果都是false
+        //空类型转成布尔
+        // var base = null //false
+
+        ////空类型转成布尔
+        // var base = undefined //false
+
+        // console.log('原来的值和类型')
+        // console.log(base)
+        // console.log(typeof base)
+        // console.log('转换后的值和类型')
+        // var res = Boolean(base)
+        // console.log(res)
+        // console.log(typeof res)
+
+        console.log(undefined == null)
+    </script>
+</body>
+</html>

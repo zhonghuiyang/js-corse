@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #e5e5e5;
+        }
+        ul li{
+            list-style: none;
+            width: 234px;
+            height: 300px;
+            background-color: #fff;
+            float: left;
+            margin: 30px;
+            text-align: center;
+            font-size: 12px;
+        }
+        ul li img{
+            width: 160px;
+            height: 160px;
+            margin-top: 20px;
+        }
+        ul li p{
+            line-height: 30px;
+        }
+        .price{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //全局命名污染
+        // var name = '张三'
+        // var name = '杨帅'
+        // console.log(name)
+
+        //作用：解决全局命名冲突问题，可以让一个变量名称多次使用——name、age
+        // var obj1 = {
+        //     name: '张三',
+        //     age: 18
+        // }
+        // var obj2 = {
+        //     name: '杨帅',
+        //     age: 18
+        // }
+        // console.log(obj1.name)
+        // console.log(obj2.name)
+
+        //作用：比数组功能更为强大，描述信息更为清晰。在工作中一般会把对象和数组一起配合使用
+        // var arr = ['张三', '李四', '王麻子']
+        // var obj = {
+        //     name: '张三'
+        // }
+
+        // var data = {
+        //     arrName: ['张三', '李四', '王麻子'],
+        //     arrAge: [19, 20, 39]
+        // }
+        // console.log(data.arrName)
+
+        // var miData = {
+        //     id: 1,
+        //     url: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0bcd64f412dfb5e15695fa96d21ecb23.png?thumb=1&w=200&h=200&f=webp&q=90',
+        //     title: 'Xiaomi Civi 1S',
+        //     des: '原生美肌人像｜奇迹阳光动人新色｜骁龙778G Plus',
+        //     price: 2299
+        // }
+        // var miData2 = {
+        //     id: 2,
+        //     url: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d764150a470174741d8b0b04515f7a78.jpg?thumb=1&w=200&h=200&f=webp&q=90',
+        //     title: 'Redmi 10A',
+        //     des: '大电量、大音量、大屏幕',
+        //     price: 699
+        // }
+
+        var miData = [
+            {
+                id: 1,
+                url: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0bcd64f412dfb5e15695fa96d21ecb23.png?thumb=1&w=200&h=200&f=webp&q=90',
+                title: 'Xiaomi Civi 1S',
+                des: '原生美肌人像｜奇迹阳光动人新色｜骁龙778G Plus',
+                price: 2299
+            },
+            {
+                id: 2,
+                url: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d764150a470174741d8b0b04515f7a78.jpg?thumb=1&w=200&h=200&f=webp&q=90',
+                title: 'Redmi 10A',
+                des: '大电量、大音量、大屏幕',
+                price: 699
+            },
+            {
+                id: 3,
+                url: 'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/18d2099cb0b05bbd23cb1915dfc9d0d6.jpg?thumb=1&w=200&h=200&f=webp&q=90',
+                title: 'Redmi K50 Pro',
+                des: '2K直屏的狠旗舰',
+                price: 2999
+            }
+        ]
+        // console.log(miData)
+        var str = '<ul>'
+        for(var i=0; i<miData.length; i++){
+            str += '<li>'
+                str += '<img src='+miData[i].url+'>'
+                str += '<h3>'+miData[i].title+'</h3>'
+                str += '<p>'+miData[i].des+'</p>'
+                str += '<p class="price">'+miData[i].price+'元起</p>'
+            str += '</li>'
+        }
+        str += '</ul>'
+        document.write(str)
+    </script>
+</body>
+</html>

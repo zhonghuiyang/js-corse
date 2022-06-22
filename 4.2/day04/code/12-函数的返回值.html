@@ -1,0 +1,60 @@
+            
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            return
+            + 作用：return是函数的返回值，用于函数内部向函数外部返回一个值
+            + return是函数默认隐藏的一个功能，你可以选择使用它也可以不使用
+            + return功能
+              => 用于函数内部向函数外部返回一个值，这样函数外部就可以拿到它的内部值。return其实是函数外部和函数内部
+              沟通的一个"桥梁"
+              => 外界如何接收函数内部返回的值呢？使用函数名加括号
+              => 可以终止函数的执行
+            
+            + 注意点：
+              => 当一个函数没有返回值的时候，外界接收到就是undefined
+
+            + 函数访问限制
+              => 函数内部可以访问函数外部的数据
+              => 函数外部无法访问函数内部的数据
+            + 函数内部返回的值为什么要使用函数名+括号接收呢?
+              => 防止命名冲突问题，因为两个相同名称的变量，后面会把前面的给覆盖掉
+              => 函数名+括号还可以表示函数调用
+              => 函数名+括号还可以传递参数进函数内部A
+        */
+       
+        // function fn(){
+        //     var a = '小a同学'
+           
+        //     //把函数内部的a变量向函数外部返回了
+        //     return a
+        // }
+        // var res = fn()
+        // console.log(res)
+
+        // function fn2(){
+        //     console.log('hello')
+        //     //终止函数的执行
+        //     return 
+        //     console.log('world')
+        // }
+        // fn2()
+
+        function fn3(){
+            console.log('hello')
+            //函数内部没有向函数外部返回数据
+        }
+        var res = fn3()
+        console.log(res) //undefined
+        
+    </script>
+</body>
+</html>

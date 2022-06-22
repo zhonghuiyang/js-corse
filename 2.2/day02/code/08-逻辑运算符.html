@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // && 与，并且。表示两个条件都满足，才返回true
+        // console.log(10>20 && 10>6)
+
+        // || 或。表示两个条件有一个满足，就返回true
+        // console.log(10>20 || 10>6)
+
+        // ! 取反。true变false、false变true
+        // console.log(!(10>20))
+        // console.log(!!true)
+
+        // console.log(1 && 2)
+        // console.log(66 && 2)
+
+        // console.log(10 && 0)
+
+        // console.log(10 || 0)
+        // console.log(0 || 20)
+
+        // console.log(10 || 0 && 22)
+
+        // console.log(!10 && 12 || 66)
+
+        /*
+            规则：
+            + 如果使用不是布尔值的类型进行比较的话，会先转成布尔类型进行比较
+            + 两个条件都满足，返回后面一个
+            + 如果是或的关系，会返回满足的那一个
+            + && 符号的优先级大于||
+        */
+        // console.log(1 || 0)
+        // console.log(12 || 66)
+        // console.log(0 && 2)
+        // console.log(12 && 6)
+
+        console.log(10 || 0 && 66)
+    </script>
+</body>
+</html>

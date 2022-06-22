@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <select id="sl">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="num2">
+    <button id="btn">计算</button>
+    <input type="text" id="num3">
+    <script>
+        //实现简易计算器的思路：
+
+        //第一步：获取元素：document.getElementById() 或者使用刚刚封装的tools文件里面的getId方法
+
+        //第二步：事件绑定 元素.onclick = function(){}
+
+        //第三步：select的里面的option选项的value值只能通过select的value。console.log(sl.value)
+        //注意点：要想拿到最新的option的value值必须放在事件里面获取，因为只有咱们选择了，再获取
+
+        //第四步：要计算计算，要使用switch做匹配
+
+        //第五步：怎么把前面的值放在第三个文本框里面呢? num3.value = num1.value + num2.value
+
+        // var btn = document.getElementById('btn')
+        // var sl = document.getElementById('sl')
+        
+        // btn.onclick = function(){
+        //     num3.value = num1.value + num2.value
+        // }
+    </script>
+</body>
+</html>

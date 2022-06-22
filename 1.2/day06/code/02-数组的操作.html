@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //创建一个数组
+        var arr = ['张三', '李四', '杨帅', '张晋伟', '武锐']
+        console.log(arr)
+        //添加一个数组元素
+        //注意点：如果添加数组元素的时候，把下标跳过，会以空的形式给咱们显示
+        arr[5] = '张晋伟的女朋友来了'
+        
+        //替换
+        arr[0] = '小姐姐'
+
+        //删除 delete 关键字
+        //注意点：如果使用delete删除的一个数组元素，会把下标给咱们保留下来
+        delete arr[1]
+
+        //获取
+        console.log(arr[2])
+
+    </script>
+</body>
+</html>

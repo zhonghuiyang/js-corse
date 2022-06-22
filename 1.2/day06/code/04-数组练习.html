@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //将数组中数字内容求和，数组[10, 2, 6, 20, 6]
+        // var arr = [10, 2, 6, 20, 6, 8]
+        // var sum = 0
+        // for(var i=0; i<arr.length; i++){
+        //     sum += arr[i]
+        // }
+        // console.log(sum)
+
+        //已知数组[3, 5, -2, 7, 4]，获取数组中最大的值并打印 --- 并改成函数形式
+        // var arr2 = [3, 5, -2, 7, 4]
+        // function getMax(arr){
+        //     console.log(arr)
+        // }
+        // getMax(arr2)
+
+        // function getMax(arr){
+        //     //假设第一个数组元素是最大值
+        //     var max = arr[0]
+        //     //遍历数组
+        //     for(var i=0; i<arr.length; i++){
+        //         //判断如果那个比咱们的值大就重新赋值
+        //         // arr[0] --> 3  3>3
+        //         // arr[1] --> 5  5>3
+        //         // ...
+        //         if(arr[i]>max){
+        //             //max = 5
+        //             max = arr[i]
+        //         }
+        //     }
+        //     return max
+        // }
+        // var res = getMax([3, 5, -2, 7, 4])
+        // console.log(res)
+
+        //遍历数组[10, 19, 1, 2, 8, 2, 12]，将其中的偶数打印出来, 并求出偶数的和
+        // var arr3 = [10, 19, 1, 2, 8, 2, 12]
+        //声明一个和
+        // var sum = 0
+        // //遍历
+        // for(var i=0; i<arr3.length; i++){
+        //     //判断哪些数组元素是偶数
+        //     if(arr3[i]%2==0){
+        //         sum += arr3[i]
+        //     }
+        // }
+        // console.log(sum)
+
+        //要求将数组中的0项去掉，将不为0的值存入一个新的数组，生成新的数组
+        var arr4 = ['a', 0, 'b', 0, 'c', 'd', 0, 'f', 0]
+        //先声明一个新的数组（没有内容，空数组）
+        var newArr = []
+        //遍历
+        for(var i=0; i<arr4.length; i++){
+            //arr4[i]表示数组的每一项元素
+            // console.log(arr4[i])
+            if(arr4[i] == 0){
+                continue
+            }
+            //把剩余的数组元素放在一个新的数组里面
+            newArr.push(arr4[i])
+        }
+        console.log(newArr)
+    </script>
+</body>
+</html>

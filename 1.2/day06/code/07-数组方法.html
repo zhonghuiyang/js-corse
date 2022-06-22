@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //slice(start,end): 不修改原数组, 将原数组中的指定区域数据提取出来。start开始 end结束。 
+        //如果参数是负值表示从倒数开始。不含结束位置
+        //注意点：slice()方法主要用于从很多的数据中截取咱们自己需要的数据
+        //               0       1      2          3        4
+        // var arrName = ['如花', '凤姐', '东施', '石榴姐姐', '郭姨']
+        // // var res = arrName.slice(0, 2)
+        // var res = arrName.slice(0, -2)
+        // console.log(res)
+
+        /*
+            splice 
+            + 删除：用于删除元素，两个参数，第一个参数（要删除第一项的位置），第二个参数（要删除的项数）
+            + 插入：向数组指定位置插入任意项元素。三个参数，第一个参数（开始位置），第二个参数（0），第三个参数（插入的项）
+            + 注意点：第二个参数（0）为0不会删除任何项
+            + 替换：向数组指定位置插入任意项元素，同时删除任意数量的项，三个参数。第一个参数（起始位置），第二个参数（删除的项数），第三个参数（插入任意数量的项）
+            + 注意点：要改变原数组
+        */
+        var arrName = ['如花', '凤姐', '东施', '石榴姐姐', '郭姨', '王姨', '张姨']
+        //注意点：返回值是被删除的数组元素
+        //删除功能
+        // var res = arrName.splice(0, 2)
+        // console.log(res)
+        // console.log(arrName)
+
+        //新增
+        // var res = arrName.splice(1, 0, '嘿嘿', '哈哈')
+        // console.log(arrName)
+        // console.log(res)
+
+        //替换
+        arrName.splice(1, 2, 'a', 'b')
+        console.log(arrName)
+    </script>
+</body>
+</html>

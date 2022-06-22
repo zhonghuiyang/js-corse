@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //实现一个简单的计算器  提示：定义三个变量   数字类型转换  功能：+、-、*、/
+        var num1 = prompt('请输入数字?')
+        var sy = prompt('请输入+、-、*、/')
+        var num2 = prompt('请输入数字?')
+        var res = null
+        //做匹配
+        switch(sy){
+            case '+' :
+                res = Number(num1) + Number(num2)
+                break
+            case '-' :
+                res = num1 - num2
+                break
+            case '*' :
+                res = num1 * num2
+                break
+            case '/' :
+                res = num1 / num2
+                break
+        }
+        document.write(res)
+    </script>
+</body>
+</html>

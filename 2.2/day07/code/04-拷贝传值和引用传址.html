@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //拷贝传值
+        //当咱们声明一个变量的时候，浏览器遇到var关键字会默认在咱们的内存中开辟一块空间，存储数据
+        // var a = 10
+        // var b = a           //把此时a的值赋给b
+        // console.log(a, b)
+        // a = 20
+        // console.log(a, b)
+
+        /*
+            内存
+            + 存储数据的
+            + 在咱们的内存结构中，分为两个区域
+              => 快速内存
+              => 慢内存
+            + 快速内存有一个更为专业的名称：栈内存
+            + 慢内存有一个更为专业的名称：堆内存
+            + 注意点：
+              => 基本数据类型都是存储在栈内存里面的
+              => 引用数据类型在栈里面存储的是地址，在堆里面存储的是具体的值
+        */
+
+        //引用传址：复合数据类型都是"引用传地址"
+        var arr = ['张晋伟', 18]
+        var newArr = arr
+        console.log(arr, newArr)
+        arr[0] = '杨帅'
+        console.log(arr, newArr)
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            单分支选择结构
+            + 语法：
+            if(){
+
+            }
+            + 说明：
+              => if 是系统关键字，如果条件成立就执行代码
+              => () 放的是条件，只有条件为true的时候才满足
+              => {} 里面放的是满足条件时要做的事情
+            + 注意点：
+              => 无论()括号里面写的是什么类型数据，最终都会转成布尔类型来执行
+        */
+        // var like = false
+        // if(like){
+        //     console.log('她就是你的女朋友！')
+        // }
+        if(''){
+            console.log('你猜我会出来吗1？')
+        }
+
+        if(' '){
+            console.log('你猜我会出来吗2？')
+        }   //会出来
+
+        if(undefined){
+            console.log('你猜我会出来吗3？')
+        }
+
+        if(null){
+            console.log('你猜我会出来吗4？')
+        }
+        console.log(Number(NaN))//NaN
+        console.log(Boolean(NaN))//false
+        console.log(typeof(Number(NaN)))
+        console.log(typeof(Boolean(NaN)))
+        
+        // if(NaN){
+        //     console.log('你猜我会出来吗？')
+        // }
+
+        // if('hello'){
+        //     console.log('你猜我会出来吗？')
+        // }
+
+        // if(1){
+        //     console.log('你猜我会出来吗？')
+        // }
+
+        if(0){
+            console.log('你猜我会出来吗？')
+        }
+    </script>
+</body>
+</html>

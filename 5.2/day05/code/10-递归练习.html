@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            求n个数的累加
+            + 1 + 2 + 3 + 4 + 5
+            + n + (n-1)
+              => 5 + (5-1) 累加
+        */
+        // function getSum(n){
+        //     if(n==1){
+        //         return 1
+        //     }
+        //     /*
+        //           5 + getSum(4)
+        //           5 + 4 + getSum(3)
+        //           5 + 4 + 3 + getSum(2)
+        //           5 + 4 + 3 + 2 + 1
+        //     */
+        //     return n + getSum(n-1)
+        // }
+        // //        5 + 4 + 3 + 2 + 1
+        // var res = getSum(5)
+        // console.log(res)
+
+        /*
+            斐波那契数列
+            + 数列：1，1，2，3，5，8，13，21，34，55，89...
+            + 规律：f(n)= f(n - 1) + f(n - 2)
+              => f(5) = f(4) + f(3)
+              => f(4) = f(3) + f(2)
+              => f(3) = f(2) + f(1) --- 1 + 1
+            + 注意点：这个数列从第3项开始，每一项都等于前两项之和。
+
+            f(5)
+            f(4)  +    f(3)
+                    f(2)+f(1)
+            f(3)+f(2)
+            f(2)+f(1)
+        */
+        function fb(n){
+            if(n==1 || n==2){
+                return 1
+            }
+            return fb(n-1) + fb(n-2)
+        }
+        var res = fb(5)
+        console.log(res)
+    </script>
+</body>
+</html>

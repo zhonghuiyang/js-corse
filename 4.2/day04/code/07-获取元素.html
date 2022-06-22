@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <script>
+        /*
+            获取元素
+            + 第一种方式: 直接获取，根据标记上的id名称直接可以拿到标记
+            + 第二种方式: 开发中推荐使用
+              => document.getElementById() 在网页中通过id的方式获取元素
+              => document文档（网页）
+              => get 获取
+              => element 元素（标记）
+              => by 通过
+            + 区别:
+              => 直接通过id形式获取元素的方式最早的时候出现在亲爱的ie浏览器（低版本）上，其他的高版本浏览器不支持这种方式
+              => 所以为了解决兼容问题，让各个浏览器都支持，所以出现了document.getElementById()方法
+              => 随着技术的不断发展和更新，慢慢的其他的浏览器也支持了这种写法，仅限于其他浏览器的高版本，低版本还是不支持
+        */
+        //console.log(btn)
+
+        // console.log(document.getElementById('btn'))
+
+        //为了解决兼容问题
+        var btn = document.getElementById('btn')
+        console.log(btn)
+
+    </script>
+</body>
+</html>

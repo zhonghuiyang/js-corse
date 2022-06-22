@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">今天晚上你们就可以去嗨了！</div>
+    <script>
+        /*
+            预解析：
+            + 变量声明和函数声明提升（提升到当前作用域的最顶端）
+            + 按照原先的代码书写顺序逐行执行代码
+            + 注意点：如果给一个变量（声明提升）赋值为函数，这个时候函数声明不提升
+            作用域链访问规则
+            + 先在当前的作用域下进行查找，如果有就使用，如果没有就去上一级进行查找
+            + 直到找到0级作用域，如果还是没有就报错
+        */
+        // var a = 666;
+        // test();
+        // function test(){
+        //     var b = 777;
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(c);
+        //     var a = 888;
+        // }
+        /*
+            0
+            var a
+            function test(){
+                var b = 777;
+                console.log(a);
+                console.log(b);
+                console.log(c);
+                var a = 888;
+            }
+            a = 666;
+            test();
+
+            已经把代码预解析完毕了，接下来就是要按照下面的顺序执行代码
+            1
+            var a
+            function test(){
+                var b
+                var a
+                b = 777;
+                console.log(a); undefined
+                console.log(b); 777
+                console.log(c); 报错
+                a = 888;
+            }
+            a = 666;
+            test();
+        */
+        var box = document.getElementById('box')
+        // box.onclick = fn
+        // function fn(){
+        //     alert('弹弹...')
+        // }
+
+        /*
+            预解析：
+            function fn(){
+                alert('弹弹...')
+            }
+            box.onclick = fn
+        */
+
+        var fn2 = function(){
+            alert('嘻嘻！')
+        }
+
+        box.onclick = fn2
+        // var fn2 = function(){
+        //     alert('嘻嘻！')
+        // }
+        /*
+            预解析：
+            var fn2 undefined
+            box.onclick = fn //box.onclick = undefined
+            fn2 = function(){
+                alert('嘻嘻！')
+            }
+        */
+    </script>
+</body>
+</html>

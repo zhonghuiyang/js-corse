@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //预解析：就是浏览器会把咱们的代码进行加工处理后再执行，把这个过程称之为预解析
+        //第一步：变量和函数声明（指的是整个函数体）提升
+        //第二步：根据代码书写顺序逐行执行
+
+        // var a = 10
+        // fn()
+        // function fn(){
+        //     console.log('hello')
+        // }
+        // console.log(a)
+        /*
+            0级作用域预解析：
+            var a
+            function fn(){
+                console.log('hello')
+            }
+            a = 10
+            fn()
+            console.log(a)
+        */
+
+        // console.log(b)
+        // var b = 66
+        // console.log(b)
+        /*
+            0级作用域预解析：
+            var b
+            console.log(b) //undefined
+            b = 66
+            console.log(b)
+        */
+
+        console.log(c)
+        var c = 'hello'
+        function fn(){
+            console.log(d)
+            var d = '嘿嘿'
+        }
+        console.log(c)
+        fn()
+        /*
+            0作用域预解析：
+            var c
+            function fn(){
+                console.log(d)
+                var d = '嘿嘿'
+            }
+            console.log(c) 
+            c = 'hello'
+            console.log(c)
+            fn()
+
+            1级作用域预解析
+            var c
+            function fn(){
+                var d
+                console.log(d) //undefined
+                d = '嘿嘿'
+            }
+            console.log(c) //undefined
+            c = 'hello'
+            console.log(c) //hello
+            fn()
+        */
+        
+    </script>
+</body>
+</html>

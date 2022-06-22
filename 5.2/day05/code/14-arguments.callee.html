@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+        .box div{
+            width: 50%;
+            height: 50%;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+    </div>
+    <script>
+        //arguments.callee() 表示的就是函数名称
+        // function fn(){
+        //     //打印出来的结果就是函数本身
+        //     console.log(arguments.callee)
+        // }
+        // fn()
+
+        // var i = 0
+        // function laoHeShang2(){
+        //     i++
+        //     console.log(i+'从前有座山，山里有座庙，庙里有个老和尚，老和尚对小和尚说，从前有座山，山里有座庙，庙里有个老和尚，老和尚对小和尚说...')
+        //     if(i<10){
+        //         arguments.callee()
+        //     }
+
+        // }
+        // laoHeShang2()
+
+        //arguments.callee.length 表示形参的个数
+        function fn(a, b){
+            console.log(arguments.callee.length == arguments.length)
+            
+            // if(!(arguments.callee.length == arguments.length)){
+            //     alert('参数是不相等的')
+            // }
+
+            if(arguments.callee.length != arguments.length){
+                alert('参数是不相等的')
+            }
+        }
+        fn(10, 20, 30)
+    </script>
+</body>
+</html>

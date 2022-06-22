@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            function 函数
+            + 作用：对于重复使用的代码，咱们放进（封装）函数里面，可以多次调用
+            + function是属于引用数据类型
+            + 查看类型，使用typeof()方法
+            声明函数
+            + 语法:
+            function 函数名称(形参){
+                重复使用的代码
+            }
+            函数名称(实参)
+            + 说明:
+              => function是系统关键字
+              => 函数名称要遵循变量命名规则
+              => function关键字后面的函数名称的括号用来放参数的
+              => {}花括号里面放的重复使用的代码
+              => 函数声明必须调用才会起作用
+              => 调用函数的方式 函数名称()
+              => 调用函数的时候，函数名称的括号里面放的也是参数
+            + 函数参数
+              => 形参，形式上的参数起了一个占位的作用，其实就是一个变量
+              => 实参，就是咱们实际上要使用的值，这个值由你自己决定
+        */
+        //声明函数
+        function fn(){
+            console.log('hello，我是函数跟大家见面了!')
+        }
+        //函数调用，实现了代码重复使用
+        fn()
+        // fn()
+        // fn()
+        // fn()
+        // fn()
+        // fn()
+        // fn()
+
+        //查看函数的类型
+        console.log(fn)
+        console.log(typeof(fn)) //function
+        console.log(typeof fn)
+    </script>
+</body>
+</html>

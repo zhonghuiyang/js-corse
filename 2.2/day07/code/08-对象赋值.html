@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //对象赋值有两种方法：对象名称.属性名  对象名称['属性名']
+        //注意点：对象的键（属性名、方法名）
+        // var obj = {}
+        //添加属性
+        //obj.name = '张三'
+        // for(var key in obj){
+        //     console.log(typeof key)
+        // }
+
+        // obj['name'] = '杨帅'
+
+        //添加方法
+        // obj.say = function(){
+        //     console.log('hello')
+        // }
+        // obj['say'] = function(){
+        //     console.log('嘿嘿')
+        // }
+        // console.log(obj)
+
+        /*
+            点和中括号赋值区别：
+            + 点的形式不够灵活，但是它把对象的键的类型省略不写，默认添加
+              => 不能解析变量
+            + 中括号形式比较灵活，但是设置对象的键的时候必须写类型
+              => 如果咱们设置对象的键的时候，在中括号里面不加引号，会把咱们的键当成一个变量来解析
+        */
+        // var a = 'name'
+        // var obj2 = {}
+        // obj2.a = '张三'
+
+        //中括号可以解析变量
+        // obj2[a] = '杨帅'
+        // console.log(obj2)
+
+        //遍历对象
+        var obj3 = {
+            name: '张三',
+            age: 18,
+            sex: '男'
+        }
+        for(var key in obj3){
+            // console.log(key)
+            //          obj3['name']
+            //          obj3['age']
+            console.log(obj3[key])
+        }
+    </script>
+</body>
+</html>
